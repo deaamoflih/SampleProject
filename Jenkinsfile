@@ -8,7 +8,7 @@ node {
       withMaven {
         withSonarQubeEnv('sonarqube') {
         def mvnHome = tool name: 'mvn', type: 'maven' 
-         def scannerHome = tool 'Sonarqube' 
+         def scannerHome = tool 'sonarqube' 
         sh "${scannerHome}/bin/sonar-scanner"
   
                 }
